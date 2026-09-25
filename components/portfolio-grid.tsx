@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; 
 import type { Project } from "@/lib/data";
 
 const item = {
@@ -28,11 +28,11 @@ export function PortfolioGrid({ projects }: { projects: Project[] }) {
           transition={{ delay: i * 0.08 }}
         >
           <div>
-            <p className="text-sm text-brass-deep">{p.tag}</p>
+            {p.tag && <p className="text-sm text-brass-deep">{p.tag}</p>}
             <h3 className="mt-3 font-display text-xl">{p.title}</h3>
           </div>
           <p className="mt-auto border-t border-black/10 pt-4 text-sm text-muted-paper">
-            Replace with your project thumbnail and title
+            {p.description || "Replace with your project thumbnail and title"}
           </p>
         </motion.div>
       ))}

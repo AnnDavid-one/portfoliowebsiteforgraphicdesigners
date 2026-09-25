@@ -6,6 +6,8 @@ export type Project = {
   year: string;
   image: string;
   description: string;
+  span?: string;
+  tag?: string;
 };
 
 // Placeholder case studies. Swap `image` paths and copy with the designer's
